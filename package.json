@@ -1,0 +1,26 @@
+{
+  "name": "real-estate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon api/index.js",
+    "start": "node api/index.js"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TejasSalunkeCode/Real-State-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/TejasSalunkeCode/Real-State-App/issues"
+  },
+  "homepage": "https://github.com/TejasSalunkeCode/Real-State-App#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
