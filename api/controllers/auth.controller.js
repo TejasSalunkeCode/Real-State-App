@@ -17,7 +17,7 @@ export const signup=async (req,res,next)=>{
         // next(errorHandler(550,'error from the function'));
     }
 };
-        console.log("check try block");
+        // console.log("check try block");
 
 export const signin=async(req,res,next)=>{
     const {email,password}=req.body;
