@@ -110,16 +110,41 @@ export default function CreateListing() {
         </div>
 
         <div className="flex flex-col flex-1 gap-4">
-          <p className="font-semibold">Images:
-          <span className="font-normal text-gray-600 ml-2">The first image will be the cover (max 6)</span>
+          <p className="font-semibold">
+            Images:
+            <span className="font-normal text-gray-600 ml-2">
+              The first image will be the cover (max 6)
+            </span>
           </p>
           <div className="flex gap-4">
-            <input type="file" id="images" accept="image/*" multiple/>
+            <input className="p-3 border border-gray-300 rounded w-full" type="file" id="images" accept="image/*" multiple />
             <button className="p-3 text-green-700 border border-green-700 rounded uppercase hover:shadow-lg disabled:opacity-80">Upload</button>
           </div>
-      <button className="p-3 bg-slate-700 text-white  rounded-lg uppercase hover:opacity-95 disabled:opacity-80">Create Listing</button>
-        </div>
+          {/* <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-end">
+            <label
+              htmlFor="images"
+              className="cursor-pointer px-6 py-3 bg-indigo-600 text-white rounded-md text-sm font-semibold uppercase tracking-wide hover:bg-indigo-700 transition"
+            >
+              Choose Images
+            </label>
 
+            <input
+              type="file"
+              id="images"
+              accept="image/*"
+              multiple
+              className="hidden"
+            />
+
+            <button className="px-6 py-3 bg-emerald-600 text-white rounded-md uppercase font-semibold tracking-wide hover:bg-emerald-700 transition">
+              Upload
+            </button>
+          </div> */}
+
+          <button className="p-3 bg-slate-700 text-white  rounded-lg uppercase hover:opacity-95 disabled:opacity-80">
+            Create Listing
+          </button>
+        </div>
       </form>
     </main>
   );
