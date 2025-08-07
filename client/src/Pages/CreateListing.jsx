@@ -215,7 +215,7 @@ export default function CreateListing() {
   console.log(formData);
 
   const handleImageSubmit = (e) => {
-    if (files.length > 0 && files.length + formData.imageUrls.length <= 6) {
+    if (files.length > 0 && files.length  + formData.imageUrls.length <= 6) {
       setUploading(true);
       setImageUploadError(false);
       const promises = [];
