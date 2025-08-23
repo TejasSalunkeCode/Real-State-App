@@ -184,7 +184,7 @@
 //   );
 // }
 
-import {  useState } from "react";
+import {  useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -213,7 +213,16 @@ export default function CreateListing() {
   const [imageUploadError, setImageUploadError] = useState(false);
   const [uploading, setUploading] = useState(false);
   console.log(formData);
+useEffect(()=>{
+  async function fetchss(){
 
+    const data =  await fetch("/api/listing",{
+      method:"GET"
+    })
+    console.log(data)
+  }
+  fetchss()
+},[])
   const handleImageSubmit = (e) => {
     if (files.length > 0 && files.length  + formData.imageUrls.length <= 6) {
       setUploading(true);

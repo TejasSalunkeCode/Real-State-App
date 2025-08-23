@@ -1,11 +1,36 @@
 import Listing from "../models/listining.model.js";
+import { errorHandler } from "../utils/error.js";
 
 export const createListing=async(req,res,next)=>{
-
+console.log("me")
     try {
+        console.log(req.body)
         const listining=await Listing.create(req.body);
         return res.status(201).json(listining);
+    } catch (error) {
+        console.log(error)
+        next(error);
+    }
+}
+
+
+export const deletelisting=async(req,res,next)=>{
+    const listing=await Listing.findById(req.params.id);
+
+    if(!listing){
+        return next(errorHandler,'Listing not found!');
+    }
+
+    if(req.user.id!==listing.userRef){
+        return next(errorHandler(401,'You can only delete your listings!'))
+    }
+
+    try {
+        await Listing.findByIdAndDelete(req.params.id);
+        res.status(200).json('Listing had been deleted!');
+
     } catch (error) {
         next(error);
     }
 }
+
