@@ -9,6 +9,7 @@ import Header from "./Components/Header";
 import PrivateRoute from "./Components/privateRoute";
 import CreateListing from "./Pages/CreateListing";
 import UpdateListing from "./Pages/updateListing";
+import Listing from "./Pages/Listing";
 
 export const App = () => {
   return (
@@ -27,6 +28,7 @@ export const App = () => {
           />
         </Route>
         <Route path="/about" element={<About />} />
+        <Route path="/listing/:listingId" element={<Listing/>} />
       </Routes>
     </BrowserRouter>
   );
