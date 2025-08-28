@@ -2,7 +2,6 @@ import { errorHandler } from "../utils/error.js";
 import bcryptjs from "bcryptjs";
 import User from "../models/user.model.js";
 import Listing from "../models/listining.model.js";
-import { use } from "react";
 export const test = (req, res) => {
   res.json({
     message: "Api routes is working",
